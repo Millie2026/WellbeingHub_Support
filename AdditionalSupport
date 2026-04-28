@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{background:transparent;font-family:'Segoe UI',Arial,sans-serif;padding:10px;}
+:root{--bc-teal:#1a6b6e;--bc-teal-light:#e8f4f4;--bc-dark:#1c1c1a;--bc-gray:#f5f4f2;--bc-text:#3a3a38;--bc-muted:#888780;}
+.sec-intro{font-size:14px;color:var(--bc-text);line-height:1.7;margin-bottom:18px;padding:16px 20px;background:var(--bc-teal-light);border-radius:10px;border-left:5px solid var(--bc-teal);}
+.acc-item{background:white;border-radius:12px;margin-bottom:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.07);border:1.5px solid #E8E6E0;transition:box-shadow 0.2s;}
+.acc-item:hover{box-shadow:0 4px 16px rgba(0,0,0,0.1);}
+.acc-header{display:flex;align-items:center;gap:16px;padding:18px 20px;cursor:pointer;transition:background 0.15s;user-select:none;background:white;}
+.acc-header:hover{background:#FAFAF8;}
+.acc-icon-wrap{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;font-weight:800;}
+.acc-title{flex:1;}
+.acc-title h3{font-size:17px;font-weight:700;color:var(--bc-dark);letter-spacing:-0.2px;}
+.acc-title p{font-size:13px;color:var(--bc-muted);margin-top:3px;}
+.acc-arrow{width:28px;height:28px;border-radius:50%;background:var(--bc-gray);display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--bc-muted);transition:transform 0.25s;flex-shrink:0;}
+.acc-body{max-height:0;overflow:hidden;transition:max-height 0.45s ease;}
+.acc-body.open{max-height:1000px;}
+.acc-inner{padding:20px 22px 22px;border-top:1.5px solid #EDEBE9;}
+.overview-text{font-size:14px;color:var(--bc-text);line-height:1.75;margin-bottom:18px;}
+.info-box{background:#F3F2F1;border-radius:8px;padding:16px;margin-bottom:18px;}
+.info-box h4{font-size:12px;font-weight:700;color:var(--bc-dark);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.05em;}
+.info-box ul{list-style:none;padding:0;margin:0;}
+.info-box ul li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--bc-text);line-height:1.6;margin-bottom:6px;}
+.info-box ul li:last-child{margin-bottom:0;}
+.dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:5px;}
+.links-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--bc-muted);margin-bottom:10px;}
+.link-item{display:flex;align-items:center;padding:11px 14px;border-radius:8px;margin-bottom:6px;background:var(--bc-gray);transition:background 0.15s;}
+.link-item:last-child{margin-bottom:0;}
+.link-item:hover{background:#EDEBE9;}
+.link-bullet{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-right:12px;}
+.link-name{font-size:13px;color:var(--bc-dark);flex:1;font-weight:500;}
+.link-url{font-size:12px;font-weight:600;color:var(--bc-teal);text-decoration:none;}.link-url:hover{text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<div class="sec-intro">Whatever you or a colleague may be going through, support is always available. Below you'll find information on a range of topics along with useful external resources to help signpost you or a colleague to the right support.</div>
+
+<!-- ADDICTION -->
+<div class="acc-item">
+  <div class="acc-header" onclick="toggle(this)">
+    <div class="acc-icon-wrap" style="background:#FFFDE7;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F57F17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+    <div class="acc-title"><h3>Addiction support</h3><p>Alcohol, drugs, gambling and other compulsive behaviours</p></div>
+    <div class="acc-arrow">▾</div>
+  </div>
+  <div class="acc-body"><div class="acc-inner">
+    <p class="overview-text">Addiction can affect anyone, regardless of role or background. It can include alcohol, drugs, gambling, prescription medication or other compulsive behaviours. Addiction is a complex condition that can have a real impact on someone's mental, physical and emotional wellbeing.</p>
+    <div class="info-box"><h4>What this might look like</h4><ul>
+      <li><span class="dot" style="background:#F57F17;"></span>Decline in work quality, reliability or concentration</li>
+      <li><span class="dot" style="background:#F57F17;"></span>Increased absences, lateness or withdrawn behaviour</li>
+      <li><span class="dot" style="background:#F57F17;"></span>Mood swings, irritability or sensitivity to feedback</li>
+      <li><span class="dot" style="background:#F57F17;"></span>Changes in appearance, energy or hygiene</li>
+    </ul></div>
+    <div class="links-label">Useful external resources</div>
+    <div class="link-item"><div class="link-bullet" style="background:#F57F17;"></div><span class="link-name">Talk to Frank</span><a class="link-url" href="https://talktofrank.com" target="_blank">talktofrank.com</a></div>
+    <div class="link-item"><div class="link-bullet" style="background:#F57F17;"></div><span class="link-name">We Are With You</span><a class="link-url" href="https://wearewithyou.org.uk" target="_blank">wearewithyou.org.uk</a></div>
+    <div class="link-item"><div class="link-bullet" style="background:#F57F17;"></div><span class="link-name">Alcoholics Anonymous</span><a class="link-url" href="https://www.alcoholics-anonymous.org.uk/" target="_blank">alcoholics-anonymous.org.uk</a></div>
+  </div></div>
+</div>
+
+<!-- BEREAVEMENT -->
+<div class="acc-item">
+  <div class="acc-header" onclick="toggle(this)">
+    <div class="acc-icon-wrap" style="background:#E3F2FD;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+    <div class="acc-title"><h3>Bereavement support</h3><p>Grief, loss and compassionate leave</p></div>
+    <div class="acc-arrow">▾</div>
+  </div>
+  <div class="acc-body"><div class="acc-inner">
+    <p class="overview-text">Grief can affect anyone at any time and everyone experiences it differently — there is no right or wrong way to feel. Whether it's the loss of a family member, friend or colleague, bereavement can have a real impact on day-to-day life both in and outside of work.</p>
+    <div class="info-box"><h4>What this might look like</h4><ul>
+      <li><span class="dot" style="background:#1565C0;"></span>Sadness, tearfulness or emotional withdrawal</li>
+      <li><span class="dot" style="background:#1565C0;"></span>Difficulty concentrating, forgetfulness or low motivation</li>
+      <li><span class="dot" style="background:#1565C0;"></span>Tiredness, reduced engagement or avoiding others</li>
+    </ul></div>
+    <div class="links-label">Useful external resources</div>
+    <div class="link-item"><div class="link-bullet" style="background:#1565C0;"></div><span class="link-name">Cruse Bereavement Support</span><a class="link-url" href="https://cruse.org.uk" target="_blank">cruse.org.uk</a></div>
+    <div class="link-item"><div class="link-bullet" style="background:#1565C0;"></div><span class="link-name">Sands</span><a class="link-url" href="https://sands.org.uk" target="_blank">sands.org.uk</a></div>
+    <div class="link-item"><div class="link-bullet" style="background:#1565C0;"></div><span class="link-name">Child Bereavement UK</span><a class="link-url" href="https://www.childbereavementuk.org/" target="_blank">childbereavementuk.org</a></div>
+  </div></div>
+</div>
+
+<!-- CARER SUPPORT -->
+<div class="acc-item">
+  <div class="acc-header" onclick="toggle(this)">
+    <div class="acc-icon-wrap" style="background:#EDE9FE;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+    <div class="acc-title"><h3>Carer support</h3><p>Supporting those with unpaid caring responsibilities</p></div>
+    <div class="acc-arrow">▾</div>
+  </div>
+  <div class="acc-body"><div class="acc-inner">
+    <p class="overview-text">A carer is someone who provides unpaid support to a family member, friend or loved one who has an illness, disability, mental health condition or addiction. Caring for someone alongside work can be challenging and can have a real impact on your own health and wellbeing.</p>
+    <div class="info-box"><h4>What this might look like</h4><ul>
+      <li><span class="dot" style="background:#5B21B6;"></span>Fatigue or difficulty managing work alongside caring responsibilities</li>
+      <li><span class="dot" style="background:#5B21B6;"></span>Increased stress, anxiety or feeling overwhelmed</li>
+      <li><span class="dot" style="background:#5B21B6;"></span>Requests for flexibility or changes to working patterns</li>
+      <li><span class="dot" style="background:#5B21B6;"></span>Withdrawal or reduced engagement at work</li>
+    </ul></div>
+    <div class="links-label">Useful external resources</div>
+    <div class="link-item"><div class="link-bullet" style="background:#5B21B6;"></div><span class="link-name">Young Minds</span><a class="link-url" href="https://youngminds.org.uk" target="_blank">youngminds.org.uk</a></div>
+    <div class="link-item"><div class="link-bullet" style="background:#5B21B6;"></div><span class="link-name">Family Lives</span><a class="link-url" href="https://familylives.org.uk" target="_blank">familylives.org.uk</a></div>
+    <div class="link-item"><div class="link-bullet" style="background:#5B21B6;"></div><span class="link-name">Dementia UK</span><a class="link-url" href="https://dementiauk.org" target="_blank">dementiauk.org</a></div>
+  </div></div>
+</div>
+
+<!-- FINANCIAL -->
+<div class="acc-item">
+  <div class="acc-header" onclick="toggle(this)">
+    <div class="acc-icon-wrap" style="background:#E8F5E9;color:#2E7D32;font-size:22px;font-weight:800;">£</div>
+    <div class="acc-title"><h3>Financial wellbeing</h3><p>Money worries, debt and financial pressure</p></div>
+    <div class="acc-arrow">▾</div>
+  </div>
+  <div class="acc-body"><div class="acc-inner">
+    <p class="overview-text">Financial worries can affect anyone at any time and can have a real impact on mental, emotional and physical wellbeing. Whether it's the rising cost of living, debt, reduced income or an unexpected life event, financial pressure can be incredibly stressful.</p>
+    <div class="info-box"><h4>What this might look like</h4><ul>
+      <li><span class="dot" style="background:#2E7D32;"></span>Anxiety, stress, irritability or low mood</li>
+      <li><span class="dot" style="background:#2E7D32;"></span>Difficulty concentrating or making decisions</li>
+      <li><span class="dot" style="background:#2E7D32;"></span>Changes in attendance, punctuality or fatigue</li>
+      <li><span class="dot" style="background:#2E7D32;"></span>Requests for pay advances or changes to working patterns</li>
+    </ul></div>
+    <div class="links-label">Useful external resources</div>
+    <div class="link-item"><div class="link-bullet" style="background:#2E7D32;"></div><span class="link-name">StepChange</span><a class="link-url" href="https://stepchange.org" target="_blank">stepchange.org</a></div>
+    <div class="link-item"><div class="link-bullet" style="background:#2E7D32;"></div><span class="link-name">MoneyHelper</span><a class="link-url" href="https://moneyhelper.org.uk" target="_blank">moneyhelper.org.uk</a></div>
+    <div class="link-item"><div class="link-bullet" style="background:#2E7D32;"></div><span class="link-name">Turn2us</span><a class="link-url" href="https://turn2us.org.uk" target="_blank">turn2us.org.uk</a></div>
+  </div></div>
+</div>
+
+<!-- HOUSING -->
+<div class="acc-item">
+  <div class="acc-header" onclick="toggle(this)">
+    <div class="acc-icon-wrap" style="background:#FFFDE7;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F57F17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+    <div class="acc-title"><h3>Housing support</h3><p>Housing stress, insecure accommodation and living costs</p></div>
+    <div class="acc-arrow">▾</div>
+  </div>
+  <div class="acc-body"><div class="acc-inner">
+    <p class="overview-text">Housing difficulties can affect anyone and can have a serious impact on mental, emotional and physical wellbeing. Whether it's rising costs, insecure accommodation, poor living conditions or an unexpected change in circumstances, housing stress can be incredibly difficult to manage alongside work.</p>
+    <div class="info-box"><h4>What this might look like</h4><ul>
+      <li><span class="dot" style="background:#F57F17;"></span>Worry, anxiety or visible stress</li>
+      <li><span class="dot" style="background:#F57F17;"></span>Difficulty concentrating or staying focused</li>
+      <li><span class="dot" style="background:#F57F17;"></span>Changes in attendance, punctuality or requests for flexibility</li>
+      <li><span class="dot" style="background:#F57F17;"></span>Fatigue from poor sleep or long commutes</li>
+    </ul></div>
+    <div class="links-label">Useful external resources</div>
+    <div class="link-item"><div class="link-bullet" style="background:#F57F17;"></div><span class="link-name">Shelter</span><a class="link-url" href="https://england.shelter.org.uk" target="_blank">england.shelter.org.uk</a></div>
+    <div class="link-item"><div class="link-bullet" style="background:#F57F17;"></div><span class="link-name">Citizens Advice</span><a class="link-url" href="https://citizensadvice.org.uk" target="_blank">citizensadvice.org.uk</a></div>
+    <div class="link-item"><div class="link-bullet" style="background:#F57F17;"></div><span class="link-name">Government housing support</span><a class="link-url" href="https://gov.uk/housing" target="_blank">gov.uk/housing</a></div>
+  </div></div>
+</div>
+
+<!-- MENTAL HEALTH -->
+<div class="acc-item">
+  <div class="acc-header" onclick="toggle(this)">
+    <div class="acc-icon-wrap" style="background:#E3F2FD;"><svg width="26" height="26" viewBox="0 0 100 100" fill="none" stroke="#1565C0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M50 15 C30 15 15 28 15 45 C15 55 20 63 28 68 C28 75 32 82 38 85 L38 90 L62 90 L62 85 C68 82 72 75 72 68 C80 63 85 55 85 45 C85 28 70 15 50 15Z"/><line x1="38" y1="55" x2="38" y2="70"/><line x1="50" y1="50" x2="50" y2="70"/><line x1="62" y1="55" x2="62" y2="70"/><line x1="30" y1="45" x2="38" y2="55"/><line x1="38" y1="55" x2="50" y2="50"/><line x1="50" y1="50" x2="62" y2="55"/><line x1="62" y1="55" x2="70" y2="45"/></svg></div>
+    <div class="acc-title"><h3>Mental health</h3><p>Emotional, psychological and social wellbeing</p></div>
+    <div class="acc-arrow">▾</div>
+  </div>
+  <div class="acc-body"><div class="acc-inner">
+    <p class="overview-text">Mental health is something we all have, and just like physical health, it can change over time. It covers our emotional, psychological and social wellbeing — affecting how we think, feel and cope with day-to-day life. Mental health challenges can affect anyone at any point, from anxiety and low mood to more complex conditions.</p>
+    <div class="info-box"><h4>What this might look like</h4><ul>
+      <li><span class="dot" style="background:#1565C0;"></span>Excessive worry, anxiety or persistent low mood</li>
+      <li><span class="dot" style="background:#1565C0;"></span>Irritability, anger or becoming withdrawn</li>
+      <li><span class="dot" style="background:#1565C0;"></span>Difficulty concentrating, remembering things or making decisions</li>
+      <li><span class="dot" style="background:#1565C0;"></span>Withdrawal from social activities or struggling to cope with daily tasks</li>
+    </ul></div>
+    <div class="links-label">Useful external resources</div>
+    <div class="link-item"><div class="link-bullet" style="background:#1565C0;"></div><span class="link-name">Mind</span><a class="link-url" href="https://mind.org.uk" target="_blank">mind.org.uk</a></div>
+    <div class="link-item"><div class="link-bullet" style="background:#1565C0;"></div><span class="link-name">Shout</span><a class="link-url" href="https://giveusashout.org" target="_blank">giveusashout.org</a></div>
+    <div class="link-item"><div class="link-bullet" style="background:#1565C0;"></div><span class="link-name">Samaritans</span><a class="link-url" href="https://samaritans.org" target="_blank">samaritans.org</a></div>
+    
+  </div></div>
+</div>
+
+<!-- VICTIM SUPPORT -->
+<div class="acc-item">
+  <div class="acc-header" onclick="toggle(this)">
+    <div class="acc-icon-wrap" style="background:#EDE9FE;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+    <div class="acc-title"><h3>Victim support</h3><p>Crime, abuse and traumatic experiences</p></div>
+    <div class="acc-arrow">▾</div>
+  </div>
+  <div class="acc-body"><div class="acc-inner">
+    <p class="overview-text">Experiencing crime, abuse or a traumatic event can have a deep and lasting impact on someone's emotional, psychological and physical wellbeing. It can affect confidence, concentration and sense of safety — both in and outside of work.</p>
+    <div class="info-box"><h4>What this might look like</h4><ul>
+      <li><span class="dot" style="background:#5B21B6;"></span>Anxiety, fear or heightened alertness</li>
+      <li><span class="dot" style="background:#5B21B6;"></span>Mood swings, withdrawal or loss of confidence</li>
+      <li><span class="dot" style="background:#5B21B6;"></span>Difficulty concentrating, staying focused or making decisions</li>
+      <li><span class="dot" style="background:#5B21B6;"></span>Changes in attendance or requests for flexibility for safety reasons</li>
+    </ul></div>
+    <div class="links-label">Useful external resources</div>
+    <div class="link-item"><div class="link-bullet" style="background:#5B21B6;"></div><span class="link-name">Victim Support</span><a class="link-url" href="https://victimsupport.org.uk" target="_blank">victimsupport.org.uk</a></div>
+    <div class="link-item"><div class="link-bullet" style="background:#5B21B6;"></div><span class="link-name">National Domestic Abuse Helpline</span><a class="link-url" href="https://nationaldahelpline.org.uk" target="_blank">nationaldahelpline.org.uk</a></div>
+    <div class="link-item"><div class="link-bullet" style="background:#5B21B6;"></div><span class="link-name">Refuge</span><a class="link-url" href="https://refuge.org.uk" target="_blank">refuge.org.uk</a></div>
+  </div></div>
+</div>
+
+<!-- WOMEN'S HEALTH -->
+<div class="acc-item">
+  <div class="acc-header" onclick="toggle(this)">
+    <div class="acc-icon-wrap" style="background:#E8F5E9;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M12 14v8M9 19h6"/></svg></div>
+    <div class="acc-title"><h3>Women's health</h3><p>Menopause, fertility, pregnancy loss and gynaecological conditions</p></div>
+    <div class="acc-arrow">▾</div>
+  </div>
+  <div class="acc-body"><div class="acc-inner">
+    <p class="overview-text">Women's health covers a wide range of physical, emotional and hormonal factors that can affect how someone feels and functions day to day. From menstrual health and menopause to fertility challenges, pregnancy and gynaecological conditions — these experiences can impact energy, mood, concentration and confidence at work.</p>
+    <div class="info-box"><h4>What this might look like</h4><ul>
+      <li><span class="dot" style="background:#2E7D32;"></span>Changes in mood, irritability or low motivation</li>
+      <li><span class="dot" style="background:#2E7D32;"></span>Difficulty concentrating, remembering details or feelings of overwhelm</li>
+      <li><span class="dot" style="background:#2E7D32;"></span>More frequent absences or requests for flexibility</li>
+      <li><span class="dot" style="background:#2E7D32;"></span>Visible tiredness, discomfort or signs of fatigue</li>
+    </ul></div>
+    <div class="links-label">Useful external resources</div>
+    <div class="link-item"><div class="link-bullet" style="background:#2E7D32;"></div><span class="link-name">The Menopause Charity</span><a class="link-url" href="https://themenopausecharity.org" target="_blank">themenopausecharity.org</a></div>
+    <div class="link-item"><div class="link-bullet" style="background:#2E7D32;"></div><span class="link-name">Daisy Network</span><a class="link-url" href="https://daisynetwork.org" target="_blank">daisynetwork.org</a></div>
+    <div class="link-item"><div class="link-bullet" style="background:#2E7D32;"></div><span class="link-name">The PMDD Project</span><a class="link-url" href="https://thepmddproject.org" target="_blank">thepmddproject.org</a></div>
+  </div></div>
+</div>
+
+<script>
+function toggle(header){
+  var arrow=header.querySelector('.acc-arrow');
+  var body=header.nextElementSibling;
+  var isOpen=body.classList.contains('open');
+  document.querySelectorAll('.acc-body').forEach(b=>b.classList.remove('open'));
+  document.querySelectorAll('.acc-arrow').forEach(a=>a.style.transform='');
+  if(!isOpen){body.classList.add('open');arrow.style.transform='rotate(180deg)';}
+}
+</script>
+
+<script>
+function resizeParent(){
+  var height = document.body.scrollHeight;
+  window.parent.postMessage({height: height}, '*');
+}
+window.addEventListener('load', resizeParent);
+window.addEventListener('resize', resizeParent);
+// Observe DOM changes (card expand/collapse)
+var observer = new MutationObserver(resizeParent);
+observer.observe(document.body, {subtree: true, childList: true, attributes: true});
+</script>
+</body>
+</html>
